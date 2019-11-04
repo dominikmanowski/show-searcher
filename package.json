@@ -1,0 +1,22 @@
+{
+  "name": "show-searcher",
+  "version": "1.0.0",
+  "description": "Search app for TV shows",
+  "main": "index.js",
+  "author": "Dominik Manowski",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel serve src/index.html"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/runtime": "^7.6.3",
+    "sass": "^1.23.1"
+  },
+  "dependencies": {
+    "reset.css": "^2.0.2"
+  }
+}

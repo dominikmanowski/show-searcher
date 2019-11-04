@@ -1,0 +1,150 @@
+@import "reset";
+@import "variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.icon {
+  width: 25px;
+  color: $base-color;
+}
+
+.flex {
+  display: flex;
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-bar {
+  display: flex;
+  border-radius: $default-radius;
+  border: 1px solid $base-color;
+  box-shadow: $elevation1;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  &:focus-within {
+    box-shadow: $elevation2;
+  }
+  &__input {
+    padding: 10px 25px;
+    border: none;
+    width: 350px;
+    font-size: 25px;
+    font-weight: 100;
+    color: $base-color;
+  }
+
+  &__button {
+    font-size: 35px;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+}
+
+.show-container {
+  position: relative;
+  margin: 15px 30px;
+  border: 1px solid $base-color;
+  border-radius: $default-radius;
+  overflow: hidden;
+  box-shadow: $elevation1;
+
+  & > * {
+    padding: 10px;
+  }
+
+  & > *:not(:last-child) {
+    border-right: 1px solid $base-color;
+  }
+}
+
+.poster {
+  padding: 0;
+}
+
+.awards {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 1px solid #ffb90b;
+  width: 35px;
+  height: 35px;
+  background-image: url("../assets/medal.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation-fill-mode: both;
+  animation: loading 1.8s infinite ease-in-out;
+}
+
+.loader {
+  visibility: hidden;
+  display: none;
+  color: $base-color;
+  font-size: 10px;
+  margin: 70px auto;
+  position: relative;
+  text-indent: -9999px;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -15px;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 15px;
+}
+
+@keyframes loading {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 40px 0 -20px;
+  }
+  40% {
+    box-shadow: 0 40px 0 0;
+  }
+}
+
+.shown {
+  visibility: visible;
+  display: block;
+}
+
+.message {
+  font-size: 3rem;
+  text-align: center;
+}
